@@ -1,0 +1,14 @@
+Package: descriptiveStats
+Title: Descriptive Statistics Functions for Numeric Vectors
+Version: 0.0.0.9000
+Authors@R: 
+    person("Ryad", "Lachemi", , "ryadlachemi@gmail.com", role = c("aut", "cre"))
+Description: A package which implements multiple descriptive statistics functions. This includes the mean, median, mode, 1st quartile, 3rd quartile and the interquartile range. These are called used calc_YOURFUNCTION.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    stats
+Suggests: 
+    testthat
