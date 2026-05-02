@@ -53,14 +53,3 @@ ggplot(top_ten_ae, aes(x = Incidence, y = reorder(AETERM, Incidence))) + # Adver
 ggsave("ae_forest_plot.png", path = "output/") # Saves to the output folder.
 
 
-####
-
-adae_listing <- adae %>%
-  filter(TRTEMFL == "Y") %>% # Filter by treatment emergent events
-  select(USUBJID, ACTARM, AETERM, AESEV, AEREL, AESTDTC, AEENDTC) %>% # Select the relevant columns
-  arrange(USUBJID, AESTDTC) # Arrange in order of subject and AE start time.
-  
-adae_listing %>%
-  gt() %>%
-  gtsave("ae_listing.html", path = "output/")
-  

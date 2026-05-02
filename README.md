@@ -15,6 +15,8 @@ question_3/ — ADaM ADSL Dataset Creation using {admiral}
 
 question_4_tlg/ — TLG Adverse Events Reporting
 
+question_5/ — Clinical Data API (FastAPI)
+
 
 ## Questions Overview
 
@@ -81,6 +83,23 @@ Scripts:
 
 **question_4_tlg/03_create_listings**
          
+### Q5: Clinical Data API (FastAPI)
+A RESTful API built with FastAPI that serves clinical trial adverse 
+event data and calculates patient risk scores across three endpoints:
+
+- ```GET /```: Welcome message confirming the API is running
+- ```POST /ae-query```: Dynamic filtering by severity and/or treatment arm
+- ```GET /subject-risk/{subject_id}```: Weighted safety risk score per subject
+
+Script: ```question_5_api/main.py```
+
+To run:
+```bash
+cd question_5_api
+uvicorn main:app --reload
+```
+
+Interactive documentation available at http://127.0.0.1:8000/docs
 
 ## How to Run
 
