@@ -3,3 +3,5 @@
 descriptiveStats.Rproj
 .Rproj.user
 .positai
+__pycache__/
+*.pyc
